@@ -1,0 +1,92 @@
+/* Base styles*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* the heading of the page*/
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* the main container for the sections*/
+.container {
+    padding: 60px;
+    width: 100%;
+}
+
+/* 3 sections that were required*/
+.container > .dish_1, .dish_2, .dish_3 {
+    border: 1px solid black;
+    background-color: rgb(105, 5, 5);
+    padding: 40px;
+    position: relative;
+}
+
+/* Sections titles */
+#id_1, #id_2, #id_3 {
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+
+/* Specifying text color for the sections text*/
+.container p { color: rgba(241, 237, 237, 0.822); }
+
+
+/* Clearing main container floats*/
+.container > p  { 
+    clear: left; 
+    visibility: hidden;
+}
+
+/* Specifying section's titles background-color */
+#id_1 { background-color: rgb(133, 172, 185); }
+#id_2 { background-color: rgb(43, 142, 199); }
+#id_3 { background-color: rgb(160, 149, 47); }
+
+
+
+/* Media queries */
+/* Desktop version*/
+@media (min-width: 992px) {
+    .dish_1, .dish_2, .dish_3 {
+        width: 30%;
+        margin-right: 3%;
+        float: left;
+    }
+}
+
+/* Tablet version*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .dish_1, .dish_2 {
+        width: 48%;
+        float: left;
+    }
+    .dish_1 { margin-right: 2%; }
+    .dish_2 { margin-left: 2%; }
+
+    .dish_3 {
+        margin-top: 30px;
+        width: 100%;
+        float: left;
+    }
+}
+
+/* Mobile version*/
+@media (max-width: 767px) {
+    .dish_1, .dish_2, .dish_3 {
+        margin-bottom: 20px;
+        width: 100%;
+        float: left;
+    }
+}
